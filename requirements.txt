@@ -1,0 +1,6 @@
+nltk
+rank-bm25
+transformers
+torch
+streamlit
+numpy
