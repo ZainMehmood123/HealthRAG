@@ -7,10 +7,11 @@ from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import torch
 import numpy as np
 
-# Define paths
-dataset_path = r'E:\Desktop\asssss\Assignment 5\mimic-iv-ext-direct-1.0.0'
-samples_path = os.path.join(dataset_path, 'samples', 'Finished')
+# Define paths using relative paths
+dataset_path = os.path.dirname(os.path.abspath(__file__))  # base dir of the script
+samples_path = os.path.join(dataset_path, 'samples')
 diagnostic_kg_path = os.path.join(dataset_path, 'diagnostic_kg', 'Diagnosis_flowchart')
+
 
 # Preprocessing function
 def extract_relevant_data(data, is_diagnostic_kg=True):
